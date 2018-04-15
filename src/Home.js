@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from './Header'
 import Hero from './Hero'
-import CaseStudies from './CaseStudies'
-import RecentWork from './RecentWork'
 import Footer from './Footer'
 
 import * as data from './data'
@@ -23,24 +21,13 @@ class Home extends React.Component {
 
     return (
 
-      <div className='page_portfolio'>
-      
+      <div className='d-flex flex-column'>
+
         <Header />
 
-        <Hero />
-
-        <div className="container">
-            <CaseStudies
-              portfolioItems={this.state.portfolioItems}
-            />
-        </div>
-
-        <div className="container">
-          <div className="row">
-            <RecentWork
-              portfolioItems={this.state.portfolioItems} />
-          </div>
-        </div>
+        <Hero
+          portfolioItems={this.state.portfolioItems}
+        />
 
         <Footer />
       </div>

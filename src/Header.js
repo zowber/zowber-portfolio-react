@@ -9,14 +9,14 @@ const Header = (props) => {
     <div className='header'>
       <div className='container header'>
         <div className="row">
-          <div className="col-6 col-sm-7">
+          <div className="col-6">
             <div className="navbar-header">
               <a className="navbar-brand" href="/">
                 <Brand />
               </a>
             </div>
           </div>
-          <div className="col-5 offset-1 col-sm-5 offset-sm-0">
+          <div className="col-6">
             <SocialLinks />
           </div>
         </div>

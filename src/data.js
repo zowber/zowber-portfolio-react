@@ -1,7 +1,7 @@
 
 export function getPortfolioItems(success) {
     return (
-        fetch('portfolioItems.json')
+        fetch('/portfolioItems/portfolioItems.json')
             .then(res => {
                 if (res.status >= 200) {
                     return Promise.resolve(res)
@@ -17,7 +17,7 @@ export function getPortfolioItems(success) {
 
 export function getPortfolioItem(id, success) {
     return (
-        fetch(id +'.json')
+        fetch('/portfolioItems/' + id +'.json')
             .then(res => {
                 if (res.status >= 200) {
                     return Promise.resolve(res)

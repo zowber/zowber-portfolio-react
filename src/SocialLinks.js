@@ -14,7 +14,7 @@ const SocialLinks = () => {
                 <li>
                     <a href="https://github.com/zowber/">
                         <i className="fab fa-github"></i>
-                        <span className="sr-only">GitHub Profile</span>
+                        <span className="sr-only">Github Profile</span>
                     </a>
                 </li>
             </ul>

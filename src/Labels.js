@@ -1,18 +1,29 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Labels = (props) => {
-    const labels = props.labels.map(label => {
-        return (
-            <li key={label.name} className="labels__label">
-                {label.name}
-            </li>
-        )
-    })
+
+  const labels = props.labels.map((label, index) => {
     return (
-        <ul className="labels list-unstyled">
-            {labels}
-        </ul>
+      <li key={index} className="label">
+        {label.name}
+      </li>
     )
+  })
+
+  return (
+    <ul className="labels list-unstyled">
+      {labels}
+    </ul>
+  )
+}
+
+Labels.propTypes = {
+  labels: PropTypes.array.isRequired
+}
+
+Labels.defaultProps = {
+  labels: []
 }
 
 export default Labels

@@ -1,24 +1,47 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import Labels from './Labels'
+import './Hero.css'
 
-const Hero = () => {
+class Hero extends React.Component {
+  static propTypes = {
+    portfolioItems: PropTypes.array.isRequired
+  }
+  static defaultProps = {
+    portfolioItems: []
+  }
 
-  return (
-    <div className='hero'>
-      <div className="this--background-alt">
-        <div className="container">
-          <div className="row">
-            <div className='col-12 text-hero'>
-              <h1>Hello! I'm Andy Bright</h1>
-              <p className="lead">
-                A UX Designer and Developer.
-              </p>
+  render() {
+    const portfolioItems = this.props.portfolioItems
+      .filter((item, index) => index === 0)
+      .map((item, index) => {
+        return (
+          <div className="item" key={index}>
+
+            <h1> Heading</h1>
+
+            <Labels labels={[{name: 'Label'}]} />
+
+            <div className='description'>
+
             </div>
+
+            <button className='btn btn-primary'>Hi</button>
+
+            <img src='http://placehold.it/500x500' />
+
           </div>
-        </div>
+        )
+      })
+
+    return (
+      <div className='hero' >
+
+        {portfolioItems}
+
       </div>
-    </div>
-  )
-  
+    )
+  }
 }
 
 export default Hero
