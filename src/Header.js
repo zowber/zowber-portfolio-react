@@ -1,29 +1,23 @@
-import React from 'react';
-import Brand from './Brand';
+import React from "react";
+import Brand from "./Brand";
+import SocialLinks from "./SocialLinks";
+import "./Header.css";
 
-import SocialLinks from './SocialLinks'
-
-const Header = (props) => {
-
+const Header = props => {
   return (
-    <div className='header'>
-      <div className='container header'>
-        <div className="row">
-          <div className="col-6">
-            <div className="navbar-header">
-              <a className="navbar-brand" href="/">
-                <Brand />
-              </a>
-            </div>
-          </div>
-          <div className="col-6">
-            <SocialLinks />
-          </div>
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <a href="/">
+            <Brand />
+          </a>
+        </div>
+        <div className="col">
+          <SocialLinks />
         </div>
       </div>
     </div>
-  )
+  );
+};
 
-}
-
-export default Header
+export default Header;

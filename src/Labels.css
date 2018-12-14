@@ -1,0 +1,18 @@
+.labels {
+  line-height: 20px;
+}
+
+.label {
+  margin-top: 0;
+  margin-right: 4px;
+  margin-bottom: 0;
+  padding: 2px 8px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #999;
+  border-radius: 4px;
+  border: 1px solid #999;
+}

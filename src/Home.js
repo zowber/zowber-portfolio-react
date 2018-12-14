@@ -1,40 +1,30 @@
-import React from 'react';
-import Header from './Header'
-import Hero from './Hero'
-import Footer from './Footer'
+import React from "react";
+import Header from "./Header";
+import Hero from "./Hero";
+import Footer from "./Footer";
 
-import * as data from './data'
+import * as data from "./data";
 
 class Home extends React.Component {
-
   state = {
-    portfolioItems: [],
-  }
+    portfolioItems: []
+  };
 
-  componentDidMount() {
-    data.getPortfolioItems(res =>
-      this.setState({ portfolioItems: res })
-    )
+  componentWillMount() {
+    data.getPortfolioItems(res => this.setState({ portfolioItems: res }));
   }
 
   render() {
-
     return (
-
-      <div className='d-flex flex-column'>
-
+      <div className="d-flex flex-column">
         <Header />
 
-        <Hero
-          portfolioItems={this.state.portfolioItems}
-        />
+        <Hero portfolioItems={this.state.portfolioItems} />
 
         <Footer />
       </div>
-
-    )
-  };
-
+    );
+  }
 }
 
-export default Home
+export default Home;
